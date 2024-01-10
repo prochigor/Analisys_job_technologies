@@ -15,7 +15,7 @@ and analyse this information and creation graphics
 ![frequency_technologies_with_exp2024-01-10_172437.png](data%2Fplots%2Ffrequency_technologies_with_exp2024-01-10_172437.png)
 ![cities_in_vacancies_2024-01-10_172438.png](data%2Fplots%2Fcities_in_vacancies_2024-01-10_172438.png)
 ![vacancies_by_experience_2024-01-10_172439.png](data%2Fplots%2Fvacancies_by_experience_2024-01-10_172439.png)
-
+![vacancies_in_companies_2024-01-10_181218.png](data%2Fplots%2Fvacancies_in_companies_2024-01-10_181218.png)
 
 ## How to use
 1. Open terminal and clone the repo (`git clone https://github.com/prochigor/analysis-job-technologies.git`)

@@ -16,7 +16,7 @@ def make_plot_frequency_technologies(df: DataFrame) -> None:
     skills_list = df["skills"].str.split(", ")
     technologies_count = pd.Series(np.concatenate(skills_list)).value_counts()
 
-    plt.figure(figsize=(20, 10))
+    plt.figure(figsize=(30, 10))
     plt.bar(technologies_count.index, technologies_count)
     plt.xlabel("technology")
     plt.ylabel("Frequency")
@@ -109,6 +109,7 @@ def make_plot_vacancies_in_companies(df: DataFrame) -> None:
 
     plt.pie(
         vacancies_in_company,
+        labels=vacancies_in_company.index,
         autopct=lambda p: "{:.0f}".format(p * sum(vacancies_in_company) / 100),
     )
 

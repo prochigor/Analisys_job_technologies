@@ -1,7 +1,6 @@
 import csv
 from dataclasses import dataclass, fields, astuple
 import time
-import asyncio
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By

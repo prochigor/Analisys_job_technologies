@@ -1,0 +1,66 @@
+technologies = [
+    "Python",
+    "GIT",
+    "SQL",
+    "REST",
+    "API",
+    "docker",
+    "AWS",
+    "GCP",
+    "Linux",
+    "Django",
+    "Postgresql",
+    "Artificial Intelligence",
+    "AI ",
+    "js",
+    "machine learning",
+    "ML",
+    "react",
+    "OOP",
+    "Flask",
+    "NoSQL",
+    "SQL",
+    "Sqlite",
+    "network",
+    "backend",
+    "fullstack",
+    "microservice",
+    "MongoDB",
+    "HTML",
+    "CSS",
+    "algorithms",
+    "DRF",
+    "Django REST",
+    "FastAPI",
+    "asyncio",
+    "Graphql",
+    "Pytest",
+    "Unitest",
+    "Celery",
+    "Redis",
+    "Math",
+    "Data Structures",
+    "Statistics",
+    "Selenium",
+    "Scrapy",
+    "ООП",
+    "gRPC",
+    "TCP",
+    "parsing",
+    "threading",
+    "multiprocess",
+    "playwright",
+    "Node",
+    "SOLID",
+    "PHP",
+    " ШІ"
+]
+
+
+def technologies_in_vacancy(description: str) -> list:
+    skills = []
+    for technology in technologies:
+        if technology.lower() in description.lower():
+            if technology not in skills:
+                skills.append(technology)
+    return skills

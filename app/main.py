@@ -18,5 +18,5 @@ def main():
     mp.make_plot_vacancies_by_exp(df)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

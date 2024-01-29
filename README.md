@@ -8,6 +8,7 @@ and analyse this information and creation graphics
 3. `Locations for which vacancies are offered`
 4. `How murch vacancies for every categories of experience`
 5. `Top 10 companies by the largest number of vacancies`
+There is also a jupyter notebook file main.ipynb here where you can display all available graphs.
 
 ## How to look like diagrams
 
@@ -29,3 +30,4 @@ and analyse this information and creation graphics
 5. Open file `main.py` in folder `app` and run the project
 6. Wait for program is working
 7. You are welcome, in folder `data` file `vacancies.csv` with data and folder `plots` with all graphics
+8. To display the graphs, open the file main.ipynb file and click Run All

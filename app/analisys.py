@@ -14,7 +14,10 @@ def make_plot_frequency_technologies(df: DataFrame) -> None:
         "ООП": "OOP"
     }, regex=True)
     skills_list = df["skills"].str.split(", ")
-    technologies_count = pd.Series(np.concatenate(skills_list)).value_counts()
+
+    technologies_count = pd.Series(
+        np.concatenate(skills_list.iloc[:].values)
+    ).value_counts()
 
     plt.figure(figsize=(30, 10))
     plt.bar(technologies_count.index, technologies_count)
@@ -36,16 +39,24 @@ def make_plot_frequency_technologies_with_exp(df: DataFrame) -> None:
     }, regex=True)
 
     beginner_skills_list = df.loc[df["experience"] == "<1", "skills"].str.split(", ")
-    beginner_technologies = pd.Series(np.concatenate(beginner_skills_list)).value_counts()
+    beginner_technologies = pd.Series(
+        np.concatenate(beginner_skills_list.iloc[:].values)
+    ).value_counts()
 
     one_plus_exp_skills_list = df.loc[df["experience"] == "1…3", "skills"].str.split(", ")
-    one_plus_exp_technologies = pd.Series(np.concatenate(one_plus_exp_skills_list)).value_counts()
+    one_plus_exp_technologies = pd.Series(
+        np.concatenate(one_plus_exp_skills_list.iloc[:].values)
+    ).value_counts()
 
     three_plus_exp_skills_list = df.loc[df["experience"] == "3…5", "skills"].str.split(", ")
-    three_plus_exp_technologies = pd.Series(np.concatenate(three_plus_exp_skills_list)).value_counts()
+    three_plus_exp_technologies = pd.Series(
+        np.concatenate(three_plus_exp_skills_list.iloc[:].values)
+    ).value_counts()
 
     five_plus_exp_skills_list = df.loc[df["experience"] == "5+", "skills"].str.split(", ")
-    five_plus_exp_technologies = pd.Series(np.concatenate(five_plus_exp_skills_list)).value_counts()
+    five_plus_exp_technologies = pd.Series(
+        np.concatenate(five_plus_exp_skills_list.iloc[:].values)
+    ).value_counts()
 
     fig, axes = plt.subplots(2, 2, figsize=(30, 15))
     fig.suptitle("Count of technologies in all vacancies")
@@ -87,9 +98,10 @@ def make_plot_cities_in_vacancies(df: DataFrame) -> None:
     )
     df.loc[mask, "location"] = "unknown"
 
+    locations = df["location"].str.split(", ")
     locations_count = (
         pd.Series(
-            np.concatenate(df["location"].str.split(", "))
+            np.concatenate(locations.iloc[:].values)
         ).value_counts()
     )
 
